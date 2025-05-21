@@ -4,14 +4,14 @@
 
 USE ROLE CORTEX_USER_ROLE;
 -- TODO: Replace <your_user> with your username
-USE DATABASE <your_user>_CORTEX_ANALYST_DEMO;
+USE DATABASE <your_user>_DB;
 -- TODO: Replace <your_user> with your username
-USE SCHEMA <your_user>_CORTEX_ANALYST_DEMO.REVENUE_TIMESERIES;
+USE SCHEMA <your_user>_DB.REVENUE_TIMESERIES;
 -- TODO: Replace <your_user> with your username
-USE WAREHOUSE <your_user>_CORTEX_ANALYST_WH;
+USE WAREHOUSE <your_user>_WH;
 
 -- TODO: Replace <your_user> with your username
-COPY INTO <your_user>_CORTEX_ANALYST_DEMO.REVENUE_TIMESERIES.DAILY_REVENUE
+COPY INTO <your_user>_DB.REVENUE_TIMESERIES.DAILY_REVENUE
 FROM @raw_data
 FILES = ('daily_revenue.csv')
 FILE_FORMAT = (
@@ -33,7 +33,7 @@ FORCE = TRUE ;
 
 
 -- TODO: Replace <your_user> with your username
-COPY INTO <your_user>_CORTEX_ANALYST_DEMO.REVENUE_TIMESERIES.PRODUCT_DIM
+COPY INTO <your_user>_DB.REVENUE_TIMESERIES.PRODUCT_DIM
 FROM @raw_data
 FILES = ('product.csv')
 FILE_FORMAT = (
@@ -56,7 +56,7 @@ FORCE = TRUE ;
 
 
 -- TODO: Replace <your_user> with your username
-COPY INTO <your_user>_CORTEX_ANALYST_DEMO.REVENUE_TIMESERIES.REGION_DIM
+COPY INTO <your_user>_DB.REVENUE_TIMESERIES.REGION_DIM
 FROM @raw_data
 FILES = ('region.csv')
 FILE_FORMAT = (
