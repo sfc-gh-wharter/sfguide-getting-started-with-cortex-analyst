@@ -2,7 +2,7 @@
 • looad data into tables
 --*/
 
-USE ROLE CORTEX_USER_ROLE;
+USE ROLE HOL_ROLE;
 -- TODO: Replace <your_user> with your username
 USE DATABASE <your_user>_DB;
 -- TODO: Replace <your_user> with your username
