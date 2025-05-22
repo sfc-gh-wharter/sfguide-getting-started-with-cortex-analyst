@@ -9,7 +9,7 @@ USE WAREHOUSE <your_user>_WH;
 USE DATABASE <your_user>_DB;
 
 -- TODO: Replace <your_user> with your username
-CREATE OR REPLACE SCHEMA <your_user>.revenue_timeseries;
+CREATE OR REPLACE SCHEMA <your_user>_DB.revenue_timeseries;
 USE SCHEMA <your_user>_DB.revenue_timeseries;
 
 -- Create stage for raw data
